@@ -1,18 +1,7 @@
 {
-  "description": "Chromium is a free and open-source browser, primarily developed and maintained by Google.",
+  "description": "Oracle desktop",
   "docker_registry": "https://art.owb.dev",
-  "image_src": "chromium.png",
-  "run_config": {
-    "hostname": "kasm"
-  },
-  "exec_config": {
-    "go": {
-      "cmd": "bash -c '/dockerstartup/custom_startup.sh --go --url \"$KASM_URL\"'"
-    },
-    "assign": {
-      "cmd": "bash -c '/dockerstartup/custom_startup.sh --assign --url \"$KASM_URL\"'"
-    }
-  },
+  "image_src": "vs-code.png",
   "categories": [
     "Desktop"
   ],
@@ -23,11 +12,22 @@
   ],
   "compatibility": [
     {
+      "version": "1.16.x",
+      "image": "local-container-registry/linux-way4-terminal:25010810-master-02ac58b1",
+      "uncompressed_size_mb": 2428,
+      "available_tags": [
+        "develop",
+        "1.16.0"
+      ]
+
+    },
+    {
       "version": "1.17.x",
       "image": "local-container-registry/linux-way4-terminal:25010810-master-02ac58b1",
-      "uncompressed_size_mb": 2170,
+      "uncompressed_size_mb": 2528,
       "available_tags": [
-        "develop"
+        "develop",
+        "1.17.0"
       ]
     }
   ]
